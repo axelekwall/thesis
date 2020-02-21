@@ -1,0 +1,50 @@
+\documentclass[sigchi, nonacm]{acmart}
+\begin{document}
+
+\title{Information visualization of software source code evolution to manage technical debt}
+
+\author{Axel Ekwall}
+\email{axelekw@kth.se}
+\affiliation{%
+  \institution{KTH Royal Institute of Technology}
+  \city{Stockholm}
+  \country{Sweden}
+}
+
+\input{Sections/Abstract}
+
+\keywords{information visualization, technical debt, software evolution}
+
+%%
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+\maketitle
+
+\input{Sections/Introduction}
+\input{Sections/Research}
+\input{Sections/Method}
+\input{Sections/Results}
+\input{Sections/Discussion}
+\input{Sections/Conclusion}
+
+%%
+%% The acknowledgments section is defined using the "acks" environment
+%% (and NOT an unnumbered section). This ensures the proper
+%% identification of the section in the article metadata, and the
+%% consistent spelling of the heading.
+\begin{acks}
+I want to thank Björn and Tino...
+\end{acks}
+
+%%
+%% The next two lines define the bibliography style to be used, and
+%% the bibliography file.
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+%%
+%% If your work has an appendix, this is the place to put it.
+\appendix
+
+\end{document}
+\endinput
