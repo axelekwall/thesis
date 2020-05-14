@@ -38,5 +38,41 @@ A greater part of the respondent indicate that they have a clear overview of bot
 However, only half of the respondents work in a project where technical debt is actively managed (50\%) or with a clear strategy for technical debt management (50\%), and a majority (60\%) does not experience that everyone in their team are aware of the technical debt strategy.
 This points to a problem with an absence of awareness and communication about technical debt in many software development projects.
 
-\subsection{Interviews}
-Based on the data collected and analyzed from the survey, a prototype was designed with the goal to be a common source of information about a software development teams strategy and priorities regarding technical debt.
+The second part of the survey included a collection of open ended questions about the respondents experience with technical debt in their daily work.
+When asked how technical debt impacts their daily work the most common theme was that it leads to a slow down in the development process, results in longer time to deliver and limits the ability to add new features.
+One respondent writes:
+\begin{quote}
+  "[It] takes longer time to deliver new features, onboard new team members, limits what solutions we can choose for problems." (respondent 17)
+\end{quote}
+
+Next, the respondents were asked to describe how they currently manage technical debt.
+The most common answer was that they do it little by little as they stumbled upon it.
+The "boy scout principle" was mentioned multiple times by different respondents.
+One respondent explains:
+\begin{quote}
+  "Boy scout principle. Leave the code a little better than you found it." (respondent 11)
+\end{quote}
+Another aspect mentioned by multiple respondents is the difficulty managing technical debt and new features as one respondent describes in the following statement: 
+\begin{quote}
+  "We write stories for it and add them to the backlog. Each sprint we include some such stories - but it's a bit of a tug of war with the business who wants more features instead." (respondent 16)
+\end{quote}
+
+When asked about what tools or processes the respondents currently are using to manage technical debt most of the respondents did not use any special tool but rather relied on their existing workflow for bug and feature tracking, code reviews and sprint meetings.
+
+Lastly, the respondents were asked what features they would want in a tool designed to help manage technical debt.
+Among the many different answers there were a few recurring suggestions for features or important aspects of such a tool.
+Multiple respondents requested a way of understanding the balance between the cost of fixing instances of debt and the potential benefit gained by paying off the debt. An example is the following answer:
+\begin{quote}
+  "Wow, good question. Not sure, but I guess it'd important for me to somehow be able to see how 'expensive' a certain tech debt payoff project would be together with it's potential reward. This would make prioritization between different tech debt payoff projects better." (respondent 18)
+\end{quote}
+Another respondent describes a platform where you can document areas in the code where technical debt is present and keep track of the technical debt in the project:
+\begin{quote}
+  "A tool that could help us document part of the code we think as technical dept. A platform that we could have conversation about things and keep track of ideas how to solve things." (respondent 19)
+\end{quote}
+The idea of a tool to help a team schedule and prioritize technical debt also surface multiple times among the answers. One respondent writes:
+\begin{quote}
+  "Maybe a "queue" of topics we have decided is tech debt and for how long they have not been addressed. Otherwise, a solution for the current standards and ways of working with notifications for "now you have not reviewed this in X months". Making a tool which proactively helps you schedule tech debt fixing which is open and transparent to both managers and developers." (respondent 15)
+\end{quote} 
+
+\subsection{Interview results}
+Based on the data collected and analyzed from the survey, a prototype was designed and developed with the goal to be a common source of information about a software development teams strategy and priorities regarding technical debt.
