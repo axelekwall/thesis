@@ -4,4 +4,39 @@ The prototype was then evaluated through semi-structured interviews with users i
 
 The interview participants in the study were recruited from two companies, Mentimeter AB and Prototyp Stockholm AB, one of which is a digital agency while the other is a product company providing a SaaS solution for interactive presentations. TODO: describe the participants in more detail.
 
+In the first part of each interview, after exploring the prototype, the participants were presented with the following four statements and asked whether they agree or disagree with each statement.
+They were also asked to explain their position briefly.
+
+\smallskip
+\begin{enumerate}
+  \item The prototype provides a good overview of technical debt in the project.
+  \item The visualizations in the prototype provides useful information.
+  \item The prototype provides clear information about the priority of debt items.
+  \item This tool provides the information needed in order to make a decision about when to pay off debt.
+\end{enumerate}
+\smallskip
+
+Most of the participants (TODO: x/10) generally agreed with the first statement.
+However, multiple participants noted that some types of debt might not map well to the source code and thus not be well presented in the overview visualization.
+
+The second statement received mixed opinions.
+Almost all participants (TODO: x/10) agreed that visualizations in general do add value to the tool and were useful.
+However, The specific visualizations in the prototype receive some criticism regarding both the interaction and the presented information. 
+Multiple participants mentioned that the overview visualization (figure \ref{fig:overview}) was missing labels for the nodes in order to understand it better without having to interact and trigger the tooltips.
+As with the first statement some participants noted that only visualizing the source files as an overview might be insufficient in order to show all kinds of technical debt, especially for environmental and architectural debt.
+Regarding the other two visualizations, a majority of the participants wanted to be able to filter the backlog based on type and date in addition to the location by selecting a debt type in the circle chart (figure \ref{fig:debt-type}) or a month in the timeline bar chart (figure \ref{fig:history}).
+
+Although the majority of the participants agree with the third statement about the priority of debt items, many ask for a sorting option for the backlog column (figure \ref{fig:backlog}) in order to make it clear that the column is sorted by priority.
+In the current version of the prototype without a user selectable sorting option, many users took some time to realize that the backlog is sorted at all.
+Further, one user points out that it would be valuable to be able to filter out all low and normal priority debt items from both the backlog and visualizations to be able to focus on high priority items in some situations.
+
+The fourth and last statement generated more disagreement (TODO: x/10) compared to the previous statements and many participants were reluctant to agree with the statement.
+The general response was that the decisions about when to pay off debt are complex and requires weighing many different business opportunities against each other and a tool like this simply cant capture all that.
+With that said, most participants agreed that this tool would be a helpful addition in meetings and discussions about such decisions.
+One participant explains:
+\begin{quote}
+  "Debt doesn't live in it's own little bubble where you can just pay of debt all day, you have to balance it against all the other items in a backlog." (participant 3)
+\end{quote}
+A feature many participants suggested that would help in that regard would be to add an estimated cost of paying off each debt item and the potential benefit of doing so.
+
 A couple of themes emerged from the answers in the interview: (1) A designated place for debt discussions and decisions, (2) More levels of granularity, (3) Integrations with existing workflow.
