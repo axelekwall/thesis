@@ -1,13 +1,3 @@
-
-%% 4-5 pages
-
-\section{Study and Result}
-
-In this section the study will be described step by step in separate subsections in chronological order.
-For each step, the method and results will be presented together.
-
-%% The result will be divided into subsections for the result from the survey conducted to establish requirements and the results from the thematic analysis of the interviews conducted to evaluate a prototype of a proposed technical debt management tool.
-
 \subsection{Survey}
 
 The survey was conducted among professionals with various roles in software development projects, with the most common role being "Developer" (90\%) followed by "Tech Lead or Project Manager" (60\%) and "DevOps" (20\%).
@@ -77,57 +67,3 @@ The idea of a tool to help a team schedule and prioritize technical debt also su
 \begin{quote}
   "Maybe a 'queue' of topics we have decided is tech debt and for how long they have not been addressed. Otherwise, a solution for the current standards and ways of working with notifications for 'now you have not reviewed this in X months'. Making a tool which proactively helps you schedule tech debt fixing which is open and transparent to both managers and developers." (respondent 15)
 \end{quote} 
-
-\subsection{Prototype}
-
-Based on the data collected and analyzed from the survey described in the previous section, a prototype of a tool was designed and developed.
-The goal of the tool is to raise awareness among the team members of a development team, about the strategy, decisions and priorities regarding technical debt in a project.
-Further, the tool also aims to be a common source of information about the technical debt in a project and to be a helpful tool in discussions and decision making.
-
-The prototype was development as a web application with modern web technologies.
-It consists of a main view with a dashboard containing multiple widgets containing information about the technical debt in the project.
-The widgets are interconnected and responsive to user interaction.
-
-Technical debt is represented in the prototype as "debt items" which are instances of debt that can be assigned to a location in the source code. Each debt item includes, in addition to the location in the project, also a title, description, deadline, type and priority editable by the user.
-
-\input{Figures/Overview.tex}
-
-The overview widget (figure \ref{fig:overview}) is a visualization of the source code represented as a partition layout.
-Each file and folder in the tree structure is represented as a node, in this case a rectangle.
-The layout is presented in a top down orientation implying that the top most node contains all nodes below it.
-A node encodes three pieces of data, the location in the source code represented by the location in relation to other nodes, the size of the file or folder represented by the size of the node and the number of debt items associated with the node represented by the shade of the node.
-
-\input{Figures/DebtTypes.tex}
-
-The debt type widget (figure \ref{fig:debt-type}) visualizes the distribution of debt types among the debt items in the project as a circle chart.
-Each type corresponding to a distinct color which is recurring in other places in the prototype in order to help the user to find the type of a debt item at a glance.
-
-\input{Figures/History.tex}
-
-To present the user with information about the evolution of debt in the project over a span of time, a timeline widget (figure \ref{fig:history}) is included in the prototype.
-The timeline widget summarizes the number of debt items with deadlines for each month and visualizes this information as bar graph.
-The bars include both completed (green) and non-completed (red) items colored by state.
-
-\input{Figures/Backlog.tex}
-
-The prototype also includes a column with cards (figure \ref{fig:backlog}) representing debt items, a "backlog" of items for the development team to work on.
-The cards are sorted by priority and deadline with the highest priority debt items on top.
-Each card presents all relevant information about a debt item and three action buttons: "complete", "edit" and "delete".
-The user can also create a new debt item by clicking the button at the end of the list of cards.
-
-The concept proposed in this study aims to help development teams communicate about and manage technical debt by enabling everyone in the team to have an overview of the current technical debt status and priorities.
-The prototype presents the user with visualizations representing the type, location and amount of debt in the project.
-It allows the user to manage "debt items" representing an instance of debt somewhere in the project.
-The user can create, edit and delete "debt items" which are presented as a backlog for the team to work on.
-The user can also assign each item a deadline and priority. 
-
-The goal is for this concept to be a common source of information about the teams strategy and priorities regarding technical debt, and also a help when making decision about technical debt in the project.
-In other words, a unified interface for all kinds of debt in a project.
-
-\subsection{Interviews}
-
-The prototype was then evaluated through semi-structured interviews with users in which the users were able to interact with and explore the interactive prototype.
-
-The interview participants in the study were recruited from two companies, Mentimeter AB and Prototyp Stockholm AB, one of which is a digital agency while the other is a product company providing a SaaS solution for interactive presentations. TODO: describe the participants in more detail.
-
-A couple of themes emerged from the answers in the interview: (1) A designated place for debt discussions and decisions, (2) More levels of granularity, (3) Integrations with existing workflow.
