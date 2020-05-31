@@ -5,16 +5,20 @@ TODO: More references to related work.
 % In contrast, this study targets advanced users with domain knowledge and information about the context of the software project, allowing for a more advanced interactive visualization tool that presents complex information.
 
 Based on the data collected and analyzed from the survey described in the previous section, a prototype of a tool was designed and developed.
-The goal of the tool is to raise awareness among the team members of a development team, about the strategy, decisions and priorities regarding technical debt in a project.
+One of the main takeaways from the survey is that a majority of respondents felt a lack of awareness among their team members.
+Based on that finding, the goal of the tool is to raise awareness about technical debt among the team members of a development team, about the strategy, decisions and priorities regarding technical debt in a project.
 Further, the tool also aims to be a common source of information about the technical debt in a project and to be a helpful tool in discussions and decision making.
 
-The prototype was development as a web application with modern web technologies.
+The prototype was development as a web application with modern web technologies, React and Redux, using the programming language Typescript.
+In order to speed up the development process, a component library, \textit{Material-UI}, was used to create the overall structure of the interface.
 It consists of a main view with a dashboard containing multiple widgets containing information about the technical debt in the project.
 The widgets are interconnected and responsive to user interaction.
 In order to facilitate the evaluation, the prototype was developed with static data and no integration with live projects.
 However, the prototype is coded with real data in mind, and could be integrated with source code repositories with more development.
 
-Technical debt is represented in the prototype as "debt items" which are instances of debt that can be assigned to a location in the source code. Each debt item includes, in addition to the location in the project, also a title, description, deadline, type and priority editable by the user.
+Based on the work by Seaman and Guo \cite{seaman_measuring_2011}, review in the related work section, technical debt is represented in the prototype as "debt items" which are instances of debt that can be assigned to a location in the source code.
+Each debt item includes, in addition to the location in the project, also a title, description, deadline, type and priority editable by the user.
+The debt \textit{types} used in this study are informed by the \textit{dimensions od technical debt} defined by Tom et. al. \cite{tom_exploration_2013}.
 
 \input{Figures/Overview.tex}
 
@@ -36,7 +40,8 @@ The bars include both completed (green) and non-completed (red) items colored by
 
 \input{Figures/Backlog.tex}
 
-The prototype also includes a column with cards (figure \ref{fig:backlog}) representing debt items, a "backlog" of items for the development team to work on.
+The prototype also includes a column with cards (figure \ref{fig:backlog}) representing debt items, a "backlog" of items for the development team to work on. 
+This is inspired by the approach proposed by Seaman and Guo where debt is presented as a "technical debt list" \cite{seaman_measuring_2011}.
 The cards are sorted by priority and deadline with the highest priority debt items on top.
 Each card presents all relevant information about a debt item and three action buttons: "complete", "edit" and "delete".
 The user can also create a new debt item by clicking the button at the end of the list of cards.
