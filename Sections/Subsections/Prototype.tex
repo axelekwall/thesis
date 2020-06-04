@@ -1,9 +1,4 @@
 \subsection{Prototype}
-
-TODO: More references to related work.
-
-% In contrast, this study targets advanced users with domain knowledge and information about the context of the software project, allowing for a more advanced interactive visualization tool that presents complex information.
-
 Based on the data collected and analyzed from the survey described in the previous section, a prototype of a tool was designed and developed.
 One of the main takeaways from the survey is that a majority of respondents felt a lack of awareness among their team members.
 Based on that finding, the goal of the tool is to raise awareness about technical debt among the team members of a development team, about the strategy, decisions and priorities regarding technical debt in a project.
@@ -22,10 +17,17 @@ The debt \textit{types} used in this study are informed by the \textit{dimension
 
 \input{Figures/Overview.tex}
 
-The overview widget (figure \ref{fig:overview}) is a visualization of the source code represented as a partition layout.
+The overview widget (figure \ref{fig:overview}) is a visualization of the source code hierarchical data.
+Based on the work by Schultz et. al. reviewed in the related work section, two main visualization techniques were considered, \textit{treemaps} and \textit{icicle plots} \cite{schulz_design_2011}.
+A \textit{treemap} would have the advantage of the overall size of the visual representation being decided by the size of the parent node, and thus easy to predict without knowing the size of the data set.
+However it might decreases the perception of depth in the hierarchy and the parent nodes are often covered by its children nodes resulting in a less clear overview of the data.
+Since the overview of the project is the main purpose of this visualization, the \textit{icicle plot} was decided to be a better choice since it uses adjacency to represent the relationship between nodes and gives all levels in the hierarchy the same amount of space and presents the whole data structure clearly.
+It was also concluded by Woodburn et al. to be more intuitive and allow for easier navigation and understanding of the data \cite{woodburn_interactive_2019}.
+
 Each file and folder in the tree structure is represented as a node, in this case a rectangle.
 The layout is presented in a top down orientation implying that the top most node contains all nodes below it.
 A node encodes three pieces of data, the location in the source code represented by the location in relation to other nodes, the size of the file or folder represented by the size of the node and the number of debt items associated with the node represented by the shade of the node.
+The user can also interact with the visualization, more details are presented on demand when the user hovers over a node, and clicking on a node filters the backlog based on that location in the source code.
 
 \input{Figures/DebtTypes.tex}
 
