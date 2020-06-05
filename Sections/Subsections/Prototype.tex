@@ -11,11 +11,11 @@ The widgets are interconnected and responsive to user interaction.
 In order to facilitate the evaluation, the prototype was developed with static data and no integration with live projects.
 However, the prototype is coded with real data in mind, and could be integrated with source code repositories with more development.
 
+\input{Figures/Overview.tex}
+
 Based on the work by Seaman and Guo \cite{seaman_measuring_2011}, review in the related work section, technical debt is represented in the prototype as "debt items" which are instances of debt that can be assigned to a location in the source code.
 Each debt item includes, in addition to the location in the project, also a title, description, deadline, type and priority editable by the user.
 The debt \textit{types} used in this study are informed by the \textit{dimensions od technical debt} defined by Tom et. al. \cite{tom_exploration_2013}.
-
-\input{Figures/Overview.tex}
 
 The overview widget (figure \ref{fig:overview}) is a visualization of the source code hierarchical data.
 Based on the work by Schultz et. al. reviewed in the related work section, two main visualization techniques were considered, \textit{treemaps} and \textit{icicle plots} \cite{schulz_design_2011}.
@@ -30,17 +30,15 @@ A node encodes three pieces of data, the location in the source code represented
 The user can also interact with the visualization, more details are presented on demand when the user hovers over a node, and clicking on a node filters the backlog based on that location in the source code.
 
 \input{Figures/DebtTypes.tex}
+\input{Figures/History.tex}
+\input{Figures/Backlog.tex}
 
 The debt type widget (figure \ref{fig:debt-type}) visualizes the distribution of debt types among the debt items in the project as a circle chart.
 Each type corresponding to a distinct color which is recurring in other places in the prototype in order to help the user to find the type of a debt item at a glance.
 
-\input{Figures/History.tex}
-
 To present the user with information about the evolution of debt in the project over a span of time, a timeline widget (figure \ref{fig:history}) is included in the prototype.
 The timeline widget summarizes the number of debt items with deadlines for each month and visualizes this information as bar graph.
 The bars include both completed (green) and non-completed (red) items colored by state.
-
-\input{Figures/Backlog.tex}
 
 The prototype also includes a column with cards (figure \ref{fig:backlog}) representing debt items, a "backlog" of items for the development team to work on. 
 This is inspired by the approach proposed by Seaman and Guo where debt is presented as a "technical debt list" \cite{seaman_measuring_2011}.
