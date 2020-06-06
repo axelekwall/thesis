@@ -19,21 +19,25 @@ After each statement they were asked to discus their position regarding the stat
 \end{enumerate}
 \smallskip
 
-Most of the participants (TODO: x/10) generally agreed with the first statement.
+Most of the participants (7/9) generally agreed with the first statement.
 However, multiple participants noted that some types of debt might not map well to the source code and thus not be well presented in the overview visualization.
 
 The second statement received mixed opinions.
-Almost all participants (TODO: x/10) agreed that visualizations in general do add value to the tool and were useful.
+Almost all participants (8/9) agreed that visualizations in general do add value to the tool and were useful.
+One participants says:
+\begin{quote}
+  "[the prototype] is definitely providing a more valuable interface than what you would get out of an arbitrary project management tool." (participant 6)
+\end{quote}
 However, The specific visualizations in the prototype receive some criticism regarding both the interaction and the presented information. 
 Multiple participants mentioned that the overview visualization (figure \ref{fig:overview}) was missing labels for the nodes in order to understand it better without having to interact and trigger the tooltips.
 As with the first statement some participants noted that only visualizing the source files as an overview might be insufficient in order to show all kinds of technical debt, especially for environmental and architectural debt.
 Regarding the other two visualizations, a majority of the participants wanted to be able to filter the backlog based on type and date in addition to the location by selecting a debt type in the circle chart (figure \ref{fig:debt-type}) or a month in the timeline bar chart (figure \ref{fig:history}).
 
-Although the majority of the participants agree with the third statement about the priority of debt items, many ask for a sorting option for the backlog column (figure \ref{fig:backlog}) in order to make it clear that the column is sorted by priority.
+Although the majority of the participants (7/9) agree with the third statement about the priority of debt items, many ask for a sorting option for the backlog column (figure \ref{fig:backlog}) in order to make it clear that the column is sorted by priority.
 In the current version of the prototype without a user selectable sorting option, many users took some time to realize that the backlog is sorted at all.
 Further, one user points out that it would be valuable to be able to filter out all low and normal priority debt items from both the backlog and visualizations to be able to focus on high priority items in some situations.
 
-The fourth and last statement generated more disagreement (TODO: x/10) compared to the previous statements and many participants were reluctant to agree with the statement.
+The fourth and last statement generated the least agreement (4/9) compared to the previous statements and many participants were reluctant to agree with the statement.
 The general response was that the decisions about when to pay off debt are complex and requires weighing many different business opportunities against each other and a tool like this simply cant capture all that.
 With that said, most participants agreed that this tool would be a helpful addition in meetings and discussions about such decisions.
 One participant explains:
@@ -58,22 +62,29 @@ The recorded answers and discussions from the open ended questions were analyzed
 (1) \textit{A designated place for technical debt discussions and decisions}, (2) \textit{Flexible visual representation of software project with multiple levels of detail}, (3) \textit{Not another tool} and (4) \textit{Cost and benefit estimates}.
 The themes captures the recurring opinions voiced by the participants and are summarized below with examples from the transcribes interviews.
 
-(1) Multiple participants (TODO: x/10) mentioned the need for \textit{a designated place for technical debt discussions and decisions} and found that the prototype could fill that need.
+(1) Multiple participants (6/10) mentioned the need for \textit{a designated place for technical debt discussions and decisions} and found that the prototype could fill that need.
 Discussions around technical debt are many times held casually among developers and never recorded or structured and thus hard to follow up or base decisions on.
 A platform or a tool that encourages these discussions and keep a record of the outcome of such discussions can be a valuable addition in a development teams workflow. 
-TODO: Example quote.
+\begin{quote}
+  "I think its good to have somewhere to work structured with technical debt, forcing you to think about it and to make it structured by categorizing and documenting it definitely increases communication about technical debt." (participant 5)
+\end{quote}
 
-(2) A large group of the participants (TODO: x/10) noted that in order to support the large variety in debt types and debt items possible in many project, the tool would need to adapt to multiple levels of detail.
+(2) A large group of the participants (7/9) noted that in order to support the large variety in debt types and debt items possible in many project, the tool would need to adapt to multiple levels of detail.
 Some debt items could require the ability to specify an exact line of code in a source file, while other debt items can span a whole repository of source code or multiple micro services.
-This requires \textit{flexible visual representation of software project with multiple levels of detail}.
+This requires \textit{flexible visual representation of software project with multiple levels of detail}, as described by one participant:
+\begin{quote}
+  "If I've got three projects, maybe there could be a better way of getting an overview of all three projects so that I can manage all of our teams technical debt as a whole rather than just one code base?" (participant 6)
+\end{quote}
 
-(3) A common opinion among the participants (TODO: x/10) was that a key factor to adoption of this tool in their team is how well it can integrate with their current workflow and tools.
+(3) A common opinion among the participants (6/10) was that a key factor to adoption of this tool in their team is how well it can integrate with their current workflow and tools.
 "\textit{Not another tool}" to add to the already long list of services to keep up to date, unless it can bring enough value in relation to the cost of maintenance and learning.
 For some of the participants, the solution would be to make it well integrated with their workflow, for example allow them to add new debt items directly from their code editor or use this as a dashboard for an existing issue tracker etc.
-Other participants would rather have this tool be very simple to the point where it's so easy to use that it won't add much complexity to their process, and keep it separated from their other tools and services.
+Other participants would rather have this tool be very simple to the point where it's so easy to use that it won't add much complexity to their process, and keep it separated from their other tools and services. 
+In the words of one participant:
+\begin{quote}
+  "That's the thing, you have to keep it simple. It can't reacquire users to do a lot of work. It has to be either automated or really simple to add information." (participants 7)
+\end{quote}
 
-(4) When asked whether this tool could make it easier to manage technical debt, a recurring theme among the participants (TODO: x/10) was the need for a \textit{cost and benefit estimate} from each debt item.
+(4) When asked whether this tool could make it easier to manage technical debt, a recurring theme among the participants (5/10) was the need for a \textit{cost and benefit estimate} from each debt item.
 Many participants noted that this is a complicated topic and one way of estimating might not translate to every project.
 However, a way of assigning cost and benefit to items is necessary in order to priorities and make decision about paying off debt.
-
-TODO: Add example quotes for all themes.
