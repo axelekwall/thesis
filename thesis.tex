@@ -1,7 +1,8 @@
-\documentclass[sigchi, nonacm, balance=false, authorversion=true]{acmart}
+\documentclass[sigplan, nonacm, balance=false, authorversion=true]{acmart}
 \usepackage{enumitem}
 
 \graphicspath{{./Graphics/}}
+\pagestyle{plain}
 \begin{document}
 
 \title{Improving technical debt management and communication by visualizing source code}
@@ -21,6 +22,8 @@
 %%
 %% This command processes the author and affiliation and title
 %% information and builds the first part of the formatted document.
+
+\settopmatter{printfolios=true}
 \maketitle
 
 \input{Sections/Introduction}
